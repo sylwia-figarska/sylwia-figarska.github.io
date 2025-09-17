@@ -1,46 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Smooth Gradient Background</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sylwia Figarska</title>
   <style>
-    /* Full-page body */
     body {
       margin: 0;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth; /* smooth scrolling */
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 80px 20px 40px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
-      color: white;
+      flex-direction: column;
       text-align: center;
-
-      /* Gradient background */
-      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
-      background-size: 800% 800%;
-      animation: gradientAnimation 30s ease infinite;
+      background: lightpink; /* default background */
     }
 
-    /* Gradient animation */
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+    #about { background: #f8d7da; }
+    #research { background: #f1c0c0; }
+    #contact { background: #eab0b0; }
 
-    h1 {
-      font-size: 3em;
-      margin: 0;
+    h1, h2 {
+      margin: 20px 0;
     }
 
     p {
-      font-size: 1.2em;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Sylwia Figarska</h1>
-    <p>PhD in Genetic Epidemiology</p>
-  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p>Hello! I am Sylwia Figarska, PhD in Genetic Epidemiology. I am passionate about understanding the genetic basis of complex diseases and developing computational tools to analyze large-scale biological data.</p>
+  </section>
+
+  <section id="research">
+    <h2>My Research</h2>
+    <p>My research focuses on cardiovascular genetics, transcriptomics, and single-cell analyses. I work on identifying novel therapeutic targets using integrative genomics and computational biology approaches.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: s.figarska@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sylwia-figarska/" target="_blank">linkedin.com/in/sylwia-figarska</a></p>
+  </section>
+
 </body>
 </html>
