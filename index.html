@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
+  <title>Smooth Gradient Background</title>
   <style>
+    /* Full-page body */
     body {
-      background-color: lightpink; /* change this to any color */
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      padding-top: 100px;
+
+      /* Gradient background */
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+      background-size: 800% 800%;
+      animation: gradientAnimation 30s ease infinite;
     }
+
+    /* Gradient animation */
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     h1 {
-      color: deeppink; /* darkpink is not valid; try deeppink, hotpink, or #ff1493 */
+      font-size: 3em;
+      margin: 0;
     }
+
     p {
-      color: black;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <h1>Sylwia Figarska</h1>
-  <p>PhD in Genetic Epidemiology</p>
+  <div>
+    <h1>Sylwia Figarska</h1>
+    <p>PhD in Genetic Epidemiology</p>
+  </div>
 </body>
 </html>
